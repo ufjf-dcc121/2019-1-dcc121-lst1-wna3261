@@ -1,23 +1,31 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="UTF-8">
     <title>Questao 14</title>
 </head>
+
 <body>
-        <div id="x">7</div>
-        <div id="y">5</div>
-        <div id="produto"></div>
-        <div id="soma"></div>
-        <button id="calcular">Calcular!</button>
-        <script>
-            var x = document.getElementById("x");
-            var y = document.getElementById("y");
-            var produto = document.getElementById("produto");
-            var soma = document.getElementById("soma");
-            var botao = document.getElementById("botao");
-            x.contentEditable="true";
-            y.contentEditable="true";
-        </script>
+    <div id="x">7</div>
+    <div id="y">5</div>
+    <div id="produto"></div>
+    <div id="soma"></div>
+    <button id="calcular">Calcular!</button>
+    <script>
+        var x = document.getElementById("x");
+        var y = document.getElementById("y");
+        var produto = document.getElementById("produto");
+        var soma = document.getElementById("soma");
+        var botao = document.getElementById("calcular");
+        x.contentEditable = "true";
+        y.contentEditable = "true";
+        botao.addEventListener("click", calcular);
+        function calcular() {
+            produto.textContent = "O produto de " + x.textContent + " e " + y.textContent + " é " + Number(x.textContent) * Number(y.textContent) + "!";
+            soma.textContent = "A soma de " + x.textContent + " e " + y.textContent + " é " + (Number(x.textContent) + Number(y.textContent)) + "!";
+        }
+    </script>
 </body>
+
 </html>
