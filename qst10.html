@@ -5,9 +5,14 @@
     <title>Questao 10</title>
 </head>
 <body>
-    <p id="wes"></p>
-    <p id="nas"></p>
+    <p id="wes">Weslley</p>
+    <p id="nas">Nascimento</p>
     <h1 id="nomecompleto"></h1>
-    <script></script>
+    <script>
+        var nome = document.getElementById("wes");
+        var sobrenome = document.getElementById("nas");
+        var nomeCompleto = document.getElementById("nomecompleto");
+        nomeCompleto.textContent = "Bem-vindo " + nome.textContent + " " + sobrenome.textContent + "!";
+    </script>
 </body>
 </html>
