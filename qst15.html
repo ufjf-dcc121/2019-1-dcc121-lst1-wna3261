@@ -36,6 +36,11 @@
         confeitaria.contentEditable = true;
         corbeturas.contentEditable = true;
         bolos.contentEditable = true;
+        botaoLimpar.addEventListener("click", limparClick());
+        function limparClick(){
+            resultado.textContent = null;
+            melhorias.textContent = null;
+        }
     </script>
 </body>
 
