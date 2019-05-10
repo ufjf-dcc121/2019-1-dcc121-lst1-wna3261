@@ -36,10 +36,18 @@
         confeitaria.contentEditable = true;
         corbeturas.contentEditable = true;
         bolos.contentEditable = true;
-        botaoLimpar.addEventListener("click", limparClick());
+        botaoLimpar.addEventListener("click", limparClick);
         function limparClick(){
             resultado.textContent = null;
             melhorias.textContent = null;
+        }
+        botaoAvaliar.addEventListener("click", avaliarClick);
+        function avaliarClick() {
+            media = (Number(confeitaria.textContent) + Number(corbeturas.textContent) + Number(bolos.textContent))/3;
+            if(media >= 70)
+                resultado.textContent = "Parabéns " + nome.textContent + "! Você está aprovado com média " + media + "!";
+            else
+                resultado.textContent = nome.textContent + " Você está reprovado com média " + media + "!";  
         }
     </script>
 </body>
