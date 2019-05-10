@@ -18,7 +18,7 @@
         <p id="resultado"></p>
         <button id="avaliar">Avaliar</button> 
         <button id="limpar">Limpar</button>
-        <p id="melhorias"></p>
+        <pre><p id="melhorias"></p></pre>
     </main>
     <script>
         var nome = document.getElementById("nome");
@@ -48,6 +48,17 @@
                 resultado.textContent = "Parabéns " + nome.textContent + "! Você está aprovado com média " + media + "!";
             else
                 resultado.textContent = nome.textContent + " Você está reprovado com média " + media + "!";  
+            
+            if(Number(confeitaria.textContent) < 60){
+                melhorias.textContent = nome.textContent + " considere estudar mais para Confeitaria Básica\n";
+            }
+            if(Number(corbeturas.textContent) < 60){
+                melhorias.textContent += "\n" + nome.textContent + " considere estudar mais para Coberturas\n";
+            }
+            if(Number(bolos.textContent) < 60){
+                melhorias.textContent += "\n" + nome.textContent + " considere estudar mais para Broas e Bolos\n";
+            }
+                
         }
     </script>
 </body>
